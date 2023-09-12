@@ -1,0 +1,56 @@
+$azul-escuro: #053e90;
+$azul-claro: #4ca2d9;
+$azul-super-claro: #f2f6f9;
+$azul-shadow: #023a8e57;
+$preto: #000;
+$cinza-claro: #c1c1c1;
+$cinza-medio: #aaaaaa;
+$cinza-escuro: #656565;
+
+$font-family: "Source Sans Pro", sans-serif;
+
+body,
+h1,
+h2,
+h3 p,
+a,
+input {
+    font-family: $font-family;
+    color: $preto;
+}
+
+h1 {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 5px 0px;
+}
+
+p {
+    font-size: 14px;
+    font-weight: 300;
+    margin: 5px 0px;
+}
+
+.content {
+    padding: 20px;
+}
+
+.button {
+    padding: 10px 14px;
+    border-radius: 28px;
+    background-color: $azul-escuro;
+    --background: $azul-escuro;
+    box-shadow: 2px 3px 6px 0px $azul-shadow;
+    --box-shadow: none;
+    width: 87%;
+    text-transform: uppercase;
+    outline: none;
+    color: #fff;
+}
+
+.buttonSemCor {
+    background: transparent;
+    box-shadow: none;
+    color: $azul-escuro;
+    font-weight: 700;
+}

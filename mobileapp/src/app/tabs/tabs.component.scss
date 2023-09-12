@@ -1,0 +1,19 @@
+@import "../style_padrao.scss";
+
+ion-tab-button{
+    padding: 8px;
+}
+
+.iconParceiros{
+    i{
+        font-size: 19px;
+    }
+}
+
+.active{
+    border-top: 2px solid $azul-claro;
+
+    ion-icon, i, span{
+        color: $azul-claro;
+    }
+}

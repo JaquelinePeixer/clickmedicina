@@ -1,0 +1,43 @@
+@import "../style_padrao.scss";
+
+.centralizar {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+}
+
+.bg {
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+}
+
+.logoLogin {
+    width: auto;
+    height: 108px;
+    margin-bottom: 15px;
+}
+
+.esqueceuSenha {
+    margin: 6px 0px;
+    font-size: 13px;
+}
+
+.footer-md::before {
+    background-image: none;
+}
+
+.buttonCadastro {
+    margin: 0;
+    width: 100%;
+    color: $preto;
+    font-weight: 500;
+    font-size: 13px;
+    display: flex;
+    justify-content: center;
+}
+.colorAzul {
+    color: $azul-escuro;
+    font-weight: 700;
+    margin-left: 4px;
+}

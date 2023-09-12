@@ -1,0 +1,8 @@
+{
+  "name": "clickmedicinaApp",
+  "integrations": {
+    "cordova": {},
+    "capacitor": {}
+  },
+  "type": "angular"
+}

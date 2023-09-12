@@ -1,0 +1,72 @@
+<ion-header>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="9">
+        <ion-toolbar>
+          <ion-segment value="online">
+            <ion-segment-button value="online">
+              Online
+            </ion-segment-button>
+            <ion-segment-button value="offline" (click)="upgrade()">
+              Offline
+            </ion-segment-button>
+          </ion-segment>
+        </ion-toolbar>
+      </ion-col>
+      <ion-col size="3">
+        <button class="button buttonSemCor" (click)="upgrade()">
+          <ion-icon name="cog-outline"></ion-icon>
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-header>
+
+<ion-content>
+  <div class="content">
+    <h1 class="titulo">Solicitação de agendamento</h1>
+
+    <ion-list>
+      <ion-item *ngFor="let chamada of chamadas">
+        <ion-avatar>
+          <img [src]="chamada.image" alt="">
+        </ion-avatar>
+
+        <div class="bgItem">
+          <div class="info">
+            <p>{{chamada.dataAgendamento}}</p>
+            <h1>{{chamada.nome}}</h1>
+
+            <div *ngIf="chamada.presencial" class="presencial_virtual">
+              <ion-icon name="person-outline"></ion-icon>
+              <p>Presencial</p>
+            </div>
+
+            <div *ngIf="chamada.virtual" class="presencial_virtual">
+              <ion-icon name="desktop-outline"></ion-icon>
+              <p>Virtual</p>
+            </div>
+          </div>
+
+          <div class="displayButtonChamada">
+            <button class="button buttonChamada cancelar" *ngIf="chamada.cancelar" (click)="upgrade()">
+              <ion-icon name="ban-outline"></ion-icon>
+            </button>
+            <button class="button buttonChamada ligar" *ngIf="chamada.ligar" (click)="upgrade()">
+              <ion-icon name="desktop-outline"></ion-icon>
+            </button>
+            <button class="button buttonChamada" *ngIf="chamada.agendado" (click)="upgrade()">
+              <ion-icon name="calendar-clear-outline"></ion-icon>
+            </button>
+          </div>
+        </div>
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <app-tabs></app-tabs>
+  </ion-toolbar>
+</ion-footer>

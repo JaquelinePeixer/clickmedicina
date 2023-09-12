@@ -1,0 +1,27 @@
+<ion-content>
+  <div class="centralizar">
+  <div class="bg">
+    <img src="./assets/logo-clickmedicina.svg" class="logoLogin" alt="">
+
+    <ion-item>
+      <ion-label position="floating">E-mail</ion-label>
+      <ion-input type="email" inputmode="email"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Senha</ion-label>
+      <ion-input type="password" inputmode="password"></ion-input>      
+    </ion-item>
+
+    <button class="button buttonSemCor esqueceuSenha" (click)="upgrade()">Esqueceu a senha?</button>
+
+    <button class="button" routerLink="/home">Entrar</button>
+  </div>
+</div>
+</ion-content>
+
+<ion-footer>
+  <button class="button buttonSemCor buttonCadastro" (click)="upgrade()">
+    Ainda não tem cadastro? <div class="colorAzul">Faça agora.</div>
+  </button>
+</ion-footer>

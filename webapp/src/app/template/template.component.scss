@@ -1,0 +1,38 @@
+@import "../style_padrao.scss";
+
+.bgMenu {
+    display: grid;
+    grid-template-columns: $menu-lateral-tamanho auto;
+    height: 100vh;
+}
+
+#displayMobile {
+    display: none;
+    width: 100%;
+}
+
+// tela grande
+@media screen and (min-width: 1724px) {
+}
+
+// tela desktop
+@media screen and (min-width: 1200px) and (max-width: 1723px) {
+}
+
+// tablet
+@media screen and (min-width: 755px) and (max-width: 1199px) {
+    .bgMenu {
+        grid-template-columns: 91px auto;
+    }
+}
+
+// celular
+@media screen and (max-width: 754px) {
+    #displayDesktop {
+        display: none;
+    }
+
+    #displayMobile {
+        display: block;
+    }
+}

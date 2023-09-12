@@ -1,0 +1,38 @@
+<div class="bgContent">
+
+    <div  id="desktop"  class="displayDesktopLogo">
+        <img class="imgLogoClickMedicina" src="../../assets/logo-h-clickmedicina.png" alt="">
+        
+        <img class="imgLogin" src="../../assets/medico.png" alt="">
+    </div>
+    
+
+    <div  id="mobile" class="displayMobileLogo">
+        <img class="imgLogoClickMedicina" src="../../assets/logo-clickmedicina.svg" alt="">
+    </div>
+    
+    <div class="bglogin">
+        <h1 class="h1Login">Faça seu login</h1>
+
+        <form>
+            <div class="input">
+                <p>E-mail</p>
+                <input type="email" name="email" id="">
+            </div>
+
+            <div class="input">
+                <div class="displayInput">
+                    <p>Senha</p>
+                    <a (click)="upgrade()" class="buttonEsqueceuSenha">Esqueceu a senha?</a>
+                </div>
+
+                <input type="password" name="password" id="" appPassword>
+            </div>
+
+            <button class="buttonEntrar" routerLink="/">Entrar</button>
+        </form>
+    </div>
+
+    <a class="aLogin" (click)="upgrade()" >Ainda não tem cadastro? <div class="colorAzul">Faça agora.</div></a>
+
+</div>

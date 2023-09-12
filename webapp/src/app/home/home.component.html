@@ -1,0 +1,176 @@
+<div class="bgHome">
+
+    <div class="espacoBranco">
+
+        <div class="dadosDr">
+            <img class="imgDr" src="../../assets/retrato.png" alt="">
+
+
+            <div class="textoDr">
+                <h1>Boa tarde, <div class="colorAzul">Dr. Mauro</div>
+                </h1>
+
+                <div class="displayTextoDr">
+                    <div>
+                        <p class="pLegenda">Valor da consulta</p>
+                        <h3>R$500,00</h3>
+                    </div>
+
+                    <div>
+                        <p class="pLegenda">Dias da semanas</p>
+                        <div class="agrupamentoDiasSemanas">
+
+                            <p class="diaSemana">T</p>
+                            <p class="horarioSemana">10:00-18:20</p>
+
+                            <p class="diaSemana">Q</p>
+                            <p class="horarioSemana">10:00-18:20</p>
+
+                            <p class="diaSemana">Q</p>
+                            <p class="horarioSemana">10:00-18:20</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="estadoOnline">
+
+                <mat-slide-toggle class="estado" color="primary">Online</mat-slide-toggle>
+
+                <button class="notificacao" (click)="upgrade()">
+                    <i class="	fa fa-bell-o"></i>
+                    <div class="badge" *ngIf="notificacao"></div>
+                </button>
+
+            </div>
+
+        </div>
+
+        <div class="agendamento">
+
+            <h1 class="h1agendamento">Solicitações de agendamento</h1>
+
+            <div class="chamadasAgendamento">
+
+                <div class="itemChamada" *ngFor="let chamada of chamadas">
+                    <div class="displayItemChamada">
+                        <img class="imgLogo" [src]="chamada.image" alt="">
+
+                        <div class="bgItem">
+                            <div class="info">
+                                <h1 class="infoh1">{{chamada.nome}}</h1>
+                                <p class="infop" *ngIf="chamada.confirmado">
+                                    <i class='fa fa-calendar-o'></i> {{chamada.dataAgendamento}}
+                                </p>
+                            </div>
+
+                            <div class="itensDetalhes">
+                                <div *ngIf="chamada.presencial" class="presencial_virtual">
+                                    <i class="fa fa-user-o"></i>
+                                    <p>Presencial</p>
+                                </div>
+
+                                <div *ngIf="chamada.virtual" class="presencial_virtual">
+                                    <i class="fa fa-desktop"></i>
+                                    <p>Virtual</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                    <div class="bgButton">
+                        <button class="recusar" *ngIf="!chamada.confirmado" (click)="upgrade()">
+                            <i class='fa fa-close'></i> Recusar
+                        </button>
+                        <button class="aceitar" *ngIf="!chamada.confirmado" (click)="upgrade()">
+                            <i class='fa fa-check'></i> Aceitar
+                        </button>
+                        <button *ngIf="chamada.confirmado" (click)="upgrade()">
+                            <i class='fa fa-calendar-o'></i> Aceitar agendamento
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="destaqueMarketing">
+            <div class="card">
+                <div class="texto">
+                    <h1>Conheça nossos <div class="colorAzul">parceiros</div>
+                    </h1>
+                    <a (click)="upgrade()">Vestibulum rutrum quam <i class="fa fa-arrow-right"></i></a>
+                </div>
+
+                <img class="imgArredondada" src="./assets/radiografia.png" alt="">
+            </div>
+
+            <div class="card">
+                <div class="texto">
+                    <h1>Sobre o <div class="colorAzul">ClickMedicina</div>
+                    </h1>
+                    <a (click)="upgrade()">Vestibulum rutrum quam <i class="fa fa-arrow-right"></i></a>
+                </div>
+
+                <img src="./assets/doctor.png" alt="">
+            </div>
+        </div>
+
+    </div>
+
+    <div class="consultas">
+
+        <div class="input">
+            <input type="text" placeholder="Busca por pacientes">
+            <i class='fa fa-search'></i>
+        </div>
+
+        <div class="titulo">
+            <i class='fa fa-calendar-o'></i>
+            <h1>Consultas agendadas</h1>
+        </div>
+
+        <div class="tabs">
+            <button class="tabActive" id="proximo">Próximas</button>
+            <button class="" id="anterior" (click)="upgrade()">Anteriores</button>
+        </div>
+
+        <div class="chamadas">
+
+            <div class="itemChamada" *ngFor="let chamada of chamadas">
+                <img class="imgLogo" [src]="chamada.image" alt="">
+
+                <div class="bgItem">
+                    <div class="info">
+                        <h1 class="infoh1">{{chamada.nome}}</h1>
+                        <p class="infop" *ngIf="chamada.confirmado">
+                            <i class='fa fa-calendar-o'></i> {{chamada.dataAgendamento}}
+                        </p>
+
+                        <div class="itensDetalhes">
+                            <div *ngIf="chamada.presencial" class="presencial_virtual">
+                                <i class="fa fa-user-o"></i>
+                                <p>Presencial</p>
+                            </div>
+
+                            <div *ngIf="chamada.virtual" class="presencial_virtual">
+                                <i class="fa fa-desktop"></i>
+                                <p>Virtual</p>
+                            </div>
+
+                            <div *ngIf="chamada.confirmado" class="itemConfirmado">
+                                <p>Confirmado</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,50 @@
+@import "../style_padrao.scss";
+
+.displayMenuMobile {
+    background-color: $azul-escuro;
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 23px;
+    align-items: center;
+
+    img {
+        width: auto;
+        height: 40px;
+    }
+
+    a span {
+        color: #fff;
+        font-size: 29px;
+    }
+}
+
+.submenu {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    background-color: $azul-claro;
+    color: #fff;
+    gap: 13px;
+    padding: 14px;
+
+    a,
+    p {
+        font-size: 16px;
+    }
+
+    a {
+        display: flex;
+        gap: 9px;
+        align-items: center;
+    }
+
+    i {
+        color: #fff;
+    }
+
+    p {
+        color: #fff;
+        margin: 0;
+    }
+}

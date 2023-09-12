@@ -1,0 +1,69 @@
+@import "../style_padrao.scss";
+
+.displayMenuLateral {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    height: 100%;
+    background-color: $azul-super-claro;
+    align-items: center;
+    width: $menu-lateral-tamanho;
+
+    a {
+        cursor: pointer;
+        padding: 0px 35%;
+
+        &:hover {
+            cursor: pointer;
+            i {
+                color: #919191;
+            }
+        }
+    }
+}
+
+.imgLogoClick {
+    width: 47px;
+    height: 47px;
+    margin-top: 24px;
+}
+
+.displayMenuLateral i {
+    font-size: 30px;
+    color: $cinza-claro;
+    text-align: center;
+}
+
+.active {
+    border-right: 3px solid $azul-claro;
+
+    i {
+        color: $azul-claro;
+    }
+
+    &:hover {
+        cursor: pointer;
+        i {
+            color: #2779ac !important;
+        }
+    }
+}
+
+// tela grande
+@media screen and (min-width: 1724px) {
+}
+
+// tela desktop
+@media screen and (min-width: 1200px) and (max-width: 1723px) {
+}
+
+// tablet
+@media screen and (min-width: 755px) and (max-width: 1199px) {
+    .displayMenuLateral {
+        width: 91px;
+    }
+}
+
+// celular
+@media screen and (max-width: 754px) {
+}

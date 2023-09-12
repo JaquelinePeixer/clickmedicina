@@ -1,0 +1,212 @@
+@import "../style_padrao.scss";
+
+.bgContent {
+    display: grid;
+    grid-template-columns: 35% 30% 35%;
+}
+
+#desktop {
+    display: block;
+}
+
+#mobile {
+    display: none;
+}
+
+.imgLogin {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.bglogin {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    padding-left: 78px;
+}
+
+.h1Login {
+    font-size: 34px;
+    margin-bottom: 21px;
+}
+
+.input input {
+    border: 1px solid #c2c2c2;
+    border-radius: 5px;
+    padding: 9px 11px;
+    width: 100%;
+    margin-bottom: 17px;
+}
+
+.input p {
+    color: #6a6a6a;
+}
+
+.displayInput {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.buttonEntrar {
+    width: 60%;
+}
+
+.aLogin {
+    color: $preto;
+    text-align: right;
+    display: flex;
+    gap: 4px;
+    justify-content: flex-end;
+    padding-right: 30px;
+    font-weight: 500;
+    margin-top: 30px;
+
+    &:hover {
+        cursor: pointer;
+        color: #052f6b;
+    }
+}
+
+.colorAzul {
+    color: $azul-escuro;
+    font-weight: 600;
+}
+
+.buttonEsqueceuSenha {
+    font-weight: 500;
+
+    &:hover {
+        cursor: pointer;
+        color: #052f6b;
+    }
+}
+
+.displayDesktopLogo {
+    background-color: $azul-super-claro;
+    padding-top: 30px;
+    padding-left: 30px;
+
+    .imgLogoClickMedicina {
+        width: auto;
+        height: 77px;
+    }
+
+    .imgLogin {
+        width: 82%;
+        object-fit: contain;
+        float: right;
+        height: 78%;
+    }
+}
+
+// tela grande
+@media screen and (min-width: 1724px) {
+}
+
+// tela desktop
+@media screen and (min-width: 1200px) and (max-width: 1723px) {
+    .displayDesktopLogo {
+        .imgLogoClickMedicina {
+            height: 58px;
+        }
+    }
+}
+
+// tablet
+@media screen and (min-width: 755px) and (max-width: 1199px) {
+    #desktop {
+        display: none;
+    }
+
+    #mobile {
+        display: block;
+    }
+
+    .bgContent {
+        grid-template-columns: none;
+        grid-template-rows: 25% 60% 15%;
+        height: 100vh;
+    }
+
+    .bglogin {
+        padding: 14%;
+        padding-top: 0;
+        height: auto;
+    }
+
+    .imgLogoClickMedicina {
+        width: 215px;
+        height: 215px;
+    }
+
+    .input input {
+        width: -webkit-fill-available;
+    }
+
+    .displayInput {
+        width: 100%;
+    }
+
+    .displayMobileLogo {
+        width: 100%;
+        display: flex !important;
+        justify-content: center;
+        align-items: flex-end;
+    }
+
+    .aLogin {
+        justify-content: center;
+        font-size: 17px;
+    }
+}
+
+// celular
+@media screen and (max-width: 754px) {
+    #desktop {
+        display: none;
+    }
+
+    #mobile {
+        display: block;
+    }
+
+    .displayMobileLogo {
+        width: 100%;
+        display: flex !important;
+        justify-content: center;
+    }
+
+    .imgLogoClickMedicina {
+        width: 125px;
+        height: 125px;
+    }
+
+    .imgLogin {
+        display: none;
+    }
+
+    .bgContent {
+        grid-template-rows: 15% 42% 10%;
+        grid-template-columns: none;
+    }
+
+    .bglogin {
+        display: block;
+        padding: 20px;
+    }
+
+    .input input {
+        width: -webkit-fill-available;
+    }
+
+    .displayInput {
+        width: 100%;
+    }
+
+    .aLogin {
+        justify-content: center;
+    }
+}

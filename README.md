@@ -1,9 +1,9 @@
 ![](./screen-clickmedicina-app.png)
 
 <div align="center">
-    <h2>Projeto POC - Clickmedicina</h2>
+<h2>Projeto POC - Clickmedicina</h2>
 
-    Projeto desenvolvido com o objetivo de apresentar uma versão POC para a empresa Clickmedicina, cujo objetivo era criar um sistema de tele atendimento voltado para a área da saúde.
+Projeto desenvolvido com o objetivo de apresentar uma versão POC para a empresa Clickmedicina, cujo objetivo era criar um sistema de tele atendimento voltado para a área da saúde.
 </div>
 
 ## 🚀 Tecnologias 
